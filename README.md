@@ -6,11 +6,17 @@ This project uses **HTML**, **Bootstrap 5**, **Font Awesome**, **jQuery**, and *
 ## 🚩 Features
 
 ✅ Beautiful responsive design (Bootstrap 5)
+
 ✅ Source/Destination station selection with search (Select2)
+
 ✅ Swap source and destination feature
+
 ✅ Dynamic bus table display
+
 ✅ Font Awesome icons for a modern UI
+
 ✅ Clean footer with contact/social links
+
 ✅ Fully mobile responsive
 
 ---
