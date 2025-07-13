@@ -77,8 +77,8 @@ HRTC-Bus-Timetable/
 Created by **Lovnish Verma**
 📧 Email: [princelv84@gmail.com](mailto:princelv84@gmail.com)
 🌐 [Portfolio](https://lovnishverma.github.io/)
-📷 [Instagram](https://www.instagram.com/lovnish.tech)
-📘 [Facebook](https://www.facebook.com/lovnishverma.tech)
+📷 [Instagram](https://www.instagram.com/lovnishofficial)
+📘 [Facebook](https://www.facebook.com/lovnishofficial)
 
 ---
 
