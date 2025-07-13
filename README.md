@@ -3,6 +3,10 @@
 A simple and elegant responsive web application to search and view **Himachal Road Transport Corporation (HRTC)** bus timetables.
 This project uses **HTML**, **Bootstrap 5**, **Font Awesome**, **jQuery**, and **Select2** for enhanced UI/UX.
 
+# This is also availabe as android app:
+
+[View on Amazon app store](https://www.amazon.com/Lovnish-Verma-HimaBusTracker/dp/B0CTMWK6XM/ref=sr_1_1?dib=eyJ2IjoiMSJ9.z1xNz85KMLGuvmYVUjdRHA.uCIAedyftF-DBbcQ1HNdm33oCjSeSlRstkrfq7-nOPM&dib_tag=se&qid=1752429985&refinements=p_4%3ALovnish+Verma&s=mobile-apps&sr=1-1)
+
 ## 🚩 Features
 
 ✅ Beautiful responsive design (Bootstrap 5)
