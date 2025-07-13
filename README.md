@@ -1,48 +1,91 @@
-# Hello website!
+# 🚌 HRTC Bus Timetable
 
-This is a basic HTML starter project you can build on however you like. No need to save. While you develop your site, your changes will happen ✨ immediately in the preview window. On the left you'll see the files that make up your site, including HTML, JavaScript, and CSS. You can upload assets like images or audio in `assets`. The rest is up to you and your imagination. 🦄
+A simple and elegant responsive web application to search and view **Himachal Road Transport Corporation (HRTC)** bus timetables.
+This project uses **HTML**, **Bootstrap 5**, **Font Awesome**, **jQuery**, and **Select2** for enhanced UI/UX.
 
-_Last updated: 28 Feb 2023_
+## 🚩 Features
 
-## What's in this project?
+✅ Beautiful responsive design (Bootstrap 5)
+✅ Source/Destination station selection with search (Select2)
+✅ Swap source and destination feature
+✅ Dynamic bus table display
+✅ Font Awesome icons for a modern UI
+✅ Clean footer with contact/social links
+✅ Fully mobile responsive
 
-← `README.md`: That's this file, where you can tell people what your cool website does and how you built it.
+---
 
-← `index.html`: This is the main web page for your site. The HTML defines the structure and content of the page using _elements_. You'll see references in the HTML to the JS and CSS files. Try clicking the image in the center of the page!
+## 📂 Project Structure
 
-← `style.css`: CSS files add styling rules to your content. The CSS applies styles to the elements in your HTML page. The style rules also make the image move when you click it.
-
-← `script.js`: If you're feeling fancy you can add interactivity to your site with JavaScript. The code in the JavaScript file runs when the page loads, and when the visitor clicks the button you can add using the code in the TODO.
-
-Open each file and check out the comments (in gray) for more info.
-
-## Try this next 🏗️
-
-Take a look in `TODO.md` for next steps you can try out in your new site!
-
-___Want a minimal version of this project to build your own website? Check out [Blank Website](https://glitch.com/edit/#!/remix/glitch-blank-website)!___
-
-## Ready to share your site?
-
-Add these meta tags for SEO and social sharing between your page `<head></head>` tags, changing the values for your site:
-
-```
-<link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
-<meta name="description" content="A simple website, built with Glitch. Remix it to get your own."/>
-<meta name="robots" content="index,follow" />
-<meta property="og:title" content="Hello World!" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
-<meta property="og:description" content="A simple website, built with Glitch. Remix it to get your own."/>
-<meta property="og:image" content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"/>
-<meta name="twitter:card" content="summary" />
+```bash
+HRTC-Bus-Timetable/
+├── index.html        # Main HTML file (your provided code)
+├── script.js         # JavaScript logic (to be implemented by user)
+├── style.css         # (Optional) External CSS if separated
+├── assets/           # Any assets like images/icons if needed
+└── README.md         # This file
 ```
 
-![Glitch](https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2FLogo_Color.svg?v=1602781328576)
+---
 
-## You built this with Glitch!
+## 🚀 How to Run This Project
 
-[Glitch](https://glitch.com) is a friendly community where millions of people come together to build web apps and websites.
+1️⃣ Clone or download this repository.
 
-- Need more help? [Check out our Help Center](https://help.glitch.com/) for answers to any common questions.
-- Ready to make it official? [Become a paid Glitch member](https://glitch.com/pricing) to boost your app with private sharing, more storage and memory, domains and more.
+2️⃣ Ensure you have an internet connection for external CDN libraries:
+
+* Bootstrap
+* Font Awesome
+* Select2
+* jQuery
+
+3️⃣ Open `index.html` in your browser.
+
+---
+
+## 📸 Screenshots
+
+
+
+| Search Page                                                     | Result Example                                                     |
+| --------------------------------------------------------------- | ------------------------------------------------------------------ |
+| ![Search](https://github.com/user-attachments/assets/41654e2a-4735-4c26-a10d-ee31ae718e9f) | ![Results](https://github.com/user-attachments/assets/3b6e67aa-0049-4cab-a39b-930db4ff0073) |
+
+---
+
+## 🔧 Technologies Used
+
+* **HTML5**
+* **CSS3 / Bootstrap 5.2**
+* **Font Awesome 6**
+* **jQuery 3.6**
+* **Select2**
+
+---
+
+## 🔨 To-Do (Suggestions for Improvement)
+
+* Backend API to fetch live HRTC data
+* Real-time route suggestions
+* User feedback form
+* PWA (Progressive Web App) support
+
+---
+
+## 🙋 Contact
+
+Created by **Lovnish Verma**
+📧 Email: [princelv84@gmail.com](mailto:princelv84@gmail.com)
+🌐 [Portfolio](https://lovnishverma.github.io/)
+📷 [Instagram](https://www.instagram.com/lovnish.tech)
+📘 [Facebook](https://www.facebook.com/lovnishverma.tech)
+
+---
+
+## 📄 License 🦄
+
+This project is for **educational purposes only**.
+You may modify it freely for personal or academic use.
+
+---
+
