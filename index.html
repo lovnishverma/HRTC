@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HRTC Bus Timetable</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css">
+  <link rel="icon" href="https://cdn.glitch.global/b0aef9ee-1059-488a-916d-1f2db02ccec7/favicon-16x16.png?v=1706602337630" type="image/x-icon" />
+  <style>
+    /* Common styles for all screen sizes */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+      color: #343a40;
+    }
+
+    .container {
+      margin-top: 50px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+    }
+
+    h3 {
+      color: #007bff;
+    }
+
+    .search-form {
+      margin-top: 20px;
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    #bus-table {
+      margin-top: 20px;
+    }
+
+    #result {
+      margin-top: 10px;
+    }
+
+    .footer {
+      margin-top: 50px;
+      background-color: #343a40;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      padding: 20px 0;
+      border-radius: 5px;
+      color: #fff;
+    }
+
+    .social-icon {
+      margin-right: 5px;
+      color: #007bff;
+    }
+
+    select.form-select {
+      color: #000;
+    }
+
+    select.form-select option:checked {
+      background-color: #e2e3e5;
+      color: #000;
+    }
+    
+    .form-select {
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      padding: 6px 12px;
+    }
+    
+    /* Responsive design for smaller screens (e.g., smartphones) */
+@media (max-width: 576px) {
+  /* Adjust styles for smaller screens here */
+}
+
+/* Responsive design for medium-sized screens (e.g., tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+  /* Adjust styles for medium-sized screens here */
+}
+
+
+    /* Responsive design for medium-sized screens (tablets) */
+    @media (min-width: 768px) {
+      .container {
+        margin-top: 50px;
+      }
+    }
+
+    /* Responsive design for large screens (desktops) */
+    @media (min-width: 992px) {
+      .search-form {
+        margin-top: 40px;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        margin-top: 20px;
+      }
+
+      #bus-table {
+        margin-top: 40px;
+      }
+
+      #result {
+        margin-top: 20px;
+      }
+    }
+
+    /* Responsive design for extra-large screens (large desktops) */
+    @media (min-width: 1200px) {
+      .container {
+        margin-top: 70px;
+      }
+
+      .search-form {
+        margin-top: 50px;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        margin-top: 30px;
+      }
+
+      #bus-table {
+        margin-top: 50px;
+      }
+
+      #result {
+        margin-top: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h3 class="mb-4 text-center">HRTC Bus Timetable</h3>
+    <div class="search-form">
+      <div class="row">
+        <div class="col-md-6">
+          <label for="source" class="form-label">Source Station:</label>
+          <select id="source" class="form-select" onchange="searchBuses(); hideOptions(this);">
+            <option value="" disabled selected>Select or Type Source Station</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="destination" class="form-label">Destination Station:</label>
+          <select id="destination" class="form-select" onchange="searchBuses(); hideOptions(this);">
+            <option value="" disabled selected>Select or Type Destination Station</option>
+          </select>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <button type="button" class="btn btn-primary w-100" onclick="searchBus()">
+            <i class="fas fa-search"></i> Search
+          </button>
+        </div>
+        <div class="col-md-6">
+          <button type="button" class="btn btn-secondary w-100" onclick="swapStations()">
+            <i class="fas fa-exchange-alt"></i> Swap Stations
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="table-container mt-4">
+      <table id="bus-table" class="table table-bordered"></table>
+      <div id="result" class="mt-3"></div>
+    </div>
+  </div>
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <a href="https://www.instagram.com/lovnish.tech" target="_blank" class="text-white">
+            <i style="color:hotpink;" class="fab fa-instagram social-icon"></i><b style="color:hotpink;">Instagram</b>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="https://www.facebook.com/lovnishverma.tech" target="_blank" class="text-white">
+            <i class="fab fa-facebook social-icon"></i><b style="color:blue;">Facebook</b>
+          </a>
+        </div>
+        <div class="col-md-4">
+         <a href="mailto:princelv84@gmail.com" target="_blank" class="text-white">
+            <i style="color:purple;" class="fa fa-envelope"></i><b style="color:#007bff;"> Email: princelv84@gmail.com</b>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+  <script src="script.js"></script>
+
+ <script>
+  $(document).ready(function () {
+    $('#source, #destination').select2({
+      placeholder: "Type or Select Source Station"
+    });
+
+    $('#source, #destination').on('change', function (e) {
+      // Manually select the highlighted result
+      $(this).select2('close').trigger('select', { originalEvent: e });
+    });
+  });
+</script>
+
+
+</body>
+
+</html>
